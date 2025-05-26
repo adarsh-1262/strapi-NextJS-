@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import axios from 'axios'
 
-const data = await fetch("http://localhost:1337/api/articles?populate=*")
-const response = await data.json()
 
-console.log(response)
+const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+const data = await axios.get(`${baseUrl}/api/articles`)
+const response = await data.data
 
 const Blog = () => {
   return (
