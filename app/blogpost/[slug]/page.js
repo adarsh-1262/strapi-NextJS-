@@ -1,8 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import MarkdownHTML from '@/components/MarkdownHTML';
-import Link from 'next/link';
-import axios from 'axios';
 
 
 export default function Page({ params }) {
@@ -17,7 +15,7 @@ export default function Page({ params }) {
         const data = await fetch(url, { cache: 'no-store' });
         const response = await data.json();
         setBlog(response);
-        document.title = `${response.data[0].title} | Harry's Developer Portfolio`;
+        document.title = `${response.data[0].title} | Adarsh's Site`;
     };
 
     // Fetch related posts

@@ -1,4 +1,4 @@
-'use client'; // Required if using Next.js app directory with client component
+'use client'
 
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
